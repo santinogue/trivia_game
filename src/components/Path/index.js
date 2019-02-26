@@ -1,3 +1,3 @@
-import Button from './presentation';
+import Path from './presentation';
 
-export default Button;
+export default Path;

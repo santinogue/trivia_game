@@ -13,9 +13,9 @@ export const QuestionContainer = styled.div`
 export const QuestionCategory = styled.div`
   position: absolute;
   display: flex;
-  top: 0;
   padding: 0 20px 0 20px;
   align-items: center;
+  top: 6vh;
   left: 0;
   height: 40px;
   min-width: 120px;

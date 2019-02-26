@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.div`
-  cursor: pointer;
-  width: 30vh;
-  height: 10vh;
+export const PathContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 6vh;
+`;
+
+export const PathItem = styled.div`
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  font-weight: bold;
-  color: ${props => (props.secondary ? '#0d3653' : '#00c997')};
-  background: ${props => (props.secondary ? '#00c49a' : '#0d3653')};
-
-  &:hover {
-    background: ${props => (props.secondary ? '#00c49a' : '#00c49a2b')};
-    opacity: ${props => (props.secondary ? 0.8 : 1)};
-  }
-`;
-
-export const LargeButtonContainer = styled(ButtonContainer)`
-  flex: 1;
+  border: 1px solid #003655;
+  color: #0d3653;
+  background: #00c997;
+  opacity: ${props => (props.active ? 1 : 0.6)}
 `;

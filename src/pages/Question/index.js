@@ -11,6 +11,7 @@ const mapStateToProps = state => {
     question,
     category,
     answer,
+    questionIndex,
   };
 };
 

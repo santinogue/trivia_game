@@ -1,31 +1,24 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { ButtonContainer, LargeButtonContainer } from './style';
+import { PathContainer, PathItem } from './style';
 
 class Path extends PureComponent {
   render() {
-    const { children, onClick, secondary, large } = this.props;
-    const ButtonType = large ? LargeButtonContainer : ButtonContainer;
+    const { activeIndex } = this.props;
 
     return (
-      <ButtonType secondary={secondary} onClick={onClick}>
-        {children}
-      </ButtonType>
+      <PathContainer>
+        {[...Array(10).keys()].map(e => (
+          <PathItem active={e === activeIndex}>{e + 1}</PathItem>
+        ))}
+      </PathContainer>
     );
   }
 }
 
-Path.defaultProps = {
-  secondary: false,
-  large: false,
-};
-
 Path.propTypes = {
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
-  secondary: PropTypes.bool,
-  large: PropTypes.bool,
+  activeIndex: PropTypes.number.isRequired,
 };
 
 export default Path;
